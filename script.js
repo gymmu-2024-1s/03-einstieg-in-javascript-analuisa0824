@@ -50,12 +50,12 @@ export function aufgabe02(args) {
   const result = []
   //läuft Zeichen für Zeichen über den ganzen Text
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    //hänge das aktuelles Zeichen doppelt an
-    result.push(currentElement)
-    result.push(currentElement)
+    //Zählt über den Text in input
+    const currentLetter = input[i] //speichert das aktuelle Zeichen aus input
+    const currentUpperCaseLetter = currentLetter.toUpperCase()
+    result.push(currentUpperCaseLetter) // hängt die grossbuchstabenversion
   }
-
-  return result.join("")
+  return result.join("") //macht aus der liste einen text
 }
+
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
