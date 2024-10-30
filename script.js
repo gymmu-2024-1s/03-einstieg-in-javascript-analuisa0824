@@ -93,3 +93,32 @@ export function aufgabe04(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args
+  let hasUpperCaseLetter = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const upperCaseVersion = currentElement.toUpperCase() // wert uppercaseversion ist currentelement umgewandelt zu einer uppercase buchstab
+
+    if (currentElement === ".") {
+      //wenn input i ein . ist oder leerzeichen dann mach nichts
+    }
+    if (currentElement === "") {
+    } else if (currentElement === upperCaseVersion) {
+      //wenn input i gleich wie der uppercase ist dann stimmt es...
+      hasUpperCaseLetter = true //hier wurde true gegben wenn es stimmt
+    }
+  }
+  return hasUpperCaseLetter
+}
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+}
