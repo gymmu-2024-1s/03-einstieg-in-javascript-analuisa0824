@@ -117,8 +117,23 @@ linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
   const input = args
+  const result = []
+
+  let hasSonderzeichen = false
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentLetter = input[i]
+    const currentUpperCaseLetter = currentLetter.toUpperCase()
+    result.push(currentUpperCaseLetter)
   }
+
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+    const lowerCase = currentElement.toLowerCase()
+    if (currentElement === lowerCase) {
+      hasSonderzeichen = true
+    }
+  }
+
+  return hasSonderzeichen
 }
