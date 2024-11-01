@@ -129,11 +129,22 @@ export function aufgabe06(args) {
 
   for (let i = 0; i < result.length; i++) {
     const currentElement = result[i]
-    const lowerCase = currentElement.toLowerCase()
+    const lowerCase = currentElement.toLowerCase() //current element (grossbuchstaben) zu klein buchstaben umwandeln
     if (currentElement === lowerCase) {
       hasSonderzeichen = true
     }
   }
 
   return hasSonderzeichen
+}
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function name(params) {
+  const input = args
+  let hasUnd = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const Und = currentElement.toUnd()
+  }
 }
