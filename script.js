@@ -139,12 +139,59 @@ export function aufgabe06(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
-export function name(params) {
+export function aufgabe07(args) {
   const input = args
   let hasUnd = false
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const Und = currentElement.toUnd()
+    if (currentElement === "u") {
+      const nextElement = input[i + 1]
+      if (nextElement === "n") {
+        const dElement = input[i + 2]
+        if (dElement === "d") {
+          hasUnd = true
+        }
+      }
+    }
   }
+  return hasUnd
 }
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      result.push("3")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    count = count + 1
+  }
+
+  let has6 = false
+  if (count === 6) {
+    has6 = true
+  }
+
+  return has6
+}
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
