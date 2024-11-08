@@ -195,3 +195,32 @@ export function aufgabe09(args) {
   return has6
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe11(args) {
+  const input = args
+
+  //variable um den code ASCII zu speichern
+  let asciiCode = 0
+  //code ASCII ein wert hochladen
+  asciiCode = input.charCodeAt(0)
+  return asciiCode
+}
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe12(args) {
+  const input = args
+  //variable die den porsition den ersten e speichert
+  let position = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn du ein e entdeckst, dann speichere die Position
+    if (currentElement === "e") {
+      // Nur die position vom ersten e speichern
+      if (position === -1) {
+        position = i
+      }
+    }
+  }
+  return position
+}
