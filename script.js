@@ -224,3 +224,84 @@ export function aufgabe12(args) {
   }
   return position
 }
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe13(args) {
+  const input = args
+  //variable die den porsition den letzten e speichert
+  let position = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn du ein e entdeckst, dann speichere die Position
+    if (currentElement === "e") {
+      // Nur die position vom letzten e speichern
+      position = i
+    }
+  }
+  return position
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  //variable die die die position den dritten e speicher
+  let position = -1
+  let countE = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //wenn du e entdeckst, speichere diese position
+    if (currentElement === "e") {
+      // Zähle countE ums eins hoch
+      countE = countE + 1
+      // Wenn countE 3 ist, speichere die Position
+      if (countE === 3) {
+        position = i
+      }
+    }
+  }
+  return position
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn du ein Space findest, dann gib result zurück und breche ab
+    if (currentElement === " ") {
+      return result.join("")
+    }
+
+    result.push(currentElement)
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {
+  const input = args
+  const result1 = []
+  const result2 = []
+  let dollarfound = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // variable die die eingabe bis zu $ als erstes teils eine liste zählt
+    if (dollarfound === false) {
+      result1.push(currentElement)
+    } else {
+      result2.push(currentElement)
+    }
+    if (currentElement === "$") {
+      dollarfound = true
+    }
+  }
+  return [result1.join(""), result2.join("")]
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
