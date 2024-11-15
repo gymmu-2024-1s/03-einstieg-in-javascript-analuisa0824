@@ -196,6 +196,39 @@ export function aufgabe09(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
+export function aufgabe10(args) {
+  const input = args
+  const firstElement = input[0]
+
+  // teste ob input genau 7 zeichen lang ist
+  if (input.length === 7) {
+    // gut so, weiter machen
+  } else {
+    return false
+  }
+
+  if (firstElement === "#") {
+    // gut so, weiter machen
+  } else {
+    return false
+  }
+
+  // Iteriere durch die nächsten 6 Zeichen
+  for (let i = 1; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57) {
+      // gut so, weiter machen
+    } else if (65 <= ascii && ascii <= 70) {
+      // gut so, weiter machen
+    } else {
+      return false
+    }
+  }
+
+  return true
+}
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 export function aufgabe11(args) {
   const input = args
 
