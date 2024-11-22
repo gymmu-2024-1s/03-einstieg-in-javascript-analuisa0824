@@ -338,7 +338,18 @@ export function aufgabe16(args) {
   return [result1.join(""), result2.join("")]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
-export function aufgabe18(args) {
-  const input = args
 
-linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+export function aufgabe19(args) {
+  const input = args
+  //variable die jeden zeichen verdoppelt
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
