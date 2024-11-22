@@ -392,3 +392,10 @@ export function aufgabe24(args) {
   return input[input.length - 1] + input.slice(1, input.length - 1) + input[0]
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe25(args) {
+  const input = args
+  // variable dass den mittlere zeichen gelöscht wird
+  return input.slice(0, input.length / 2) + input.slice(input.length / 2 + 1)
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
