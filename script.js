@@ -353,3 +353,36 @@ export function aufgabe19(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  //variable die prüft ob nach jedem punkt ein space kommt
+  let hasSpace = true
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      const nextElement = input[i + 1]
+      if (nextElement === " ") {
+        hasSpace = true
+      } else {
+        hasSpace = false
+      }
+    }
+  }
+  return hasSpace
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  //variable dass die eingabe umkehren wird
+  const input = args.split("").reverse().join("")
+  return input
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe23(args) {
+  //variable dass die erste zeichen zusätzlich vorne und hinten gelegt werden
+  const input = args
+  return input[0] + input + input[0]
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
