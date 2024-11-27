@@ -399,3 +399,18 @@ export function aufgabe25(args) {
   return input.slice(0, input.length / 2) + input.slice(input.length / 2 + 1)
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
+export function aufgabe27(args) {
+  const input = args
+  //testet ob eine eingabe eine zahl ist
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57) {
+      return true
+    }
+  }
+  return false
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
