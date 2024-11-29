@@ -71,6 +71,9 @@ export function aufgabe03(args) {
     if (currentElement === "e") {
       count = count + 1
     }
+    if (currentElement === "E") {
+      count = count + 1
+    }
   }
 
   return count
@@ -102,17 +105,17 @@ export function aufgabe05(args) {
     const currentElement = input[i]
     const upperCaseVersion = currentElement.toUpperCase() // wert uppercaseversion ist currentelement umgewandelt zu einer uppercase buchstab
 
-    if (currentElement === ".") {
-      //wenn input i ein . ist oder leerzeichen dann mach nichts
-    }
-    if (currentElement === "") {
-    } else if (currentElement === upperCaseVersion) {
-      //wenn input i gleich wie der uppercase ist dann stimmt es...
-      hasUpperCaseLetter = true //hier wurde true gegben wenn es stimmt
-    }
+    //wenn input i ein . ist oder leerzeichen dann mach nichts
   }
-  return hasUpperCaseLetter
+  if (currentElement === upperCaseVersion) {
+    //wenn input i gleich wie der uppercase ist dann stimmt es...
+    hasUpperCaseLetter = true //hier wurde true gegben wenn es stimmt
+  } else {
+    hasUpperCaseLetter = false
+  }
 }
+return hasUpperCaseLetter
+
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
@@ -130,8 +133,11 @@ export function aufgabe06(args) {
   for (let i = 0; i < result.length; i++) {
     const currentElement = result[i]
     const lowerCase = currentElement.toLowerCase() //current element (grossbuchstaben) zu klein buchstaben umwandeln
+
     if (currentElement === lowerCase) {
       hasSonderzeichen = true
+    } else {
+      hasSonderzeichen = false
     }
   }
 
@@ -347,7 +353,7 @@ export function aufgabe19(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     result.push(currentElement)
-    result.push(currentElement)
+    result.push(currentElement) //hängt element am ende des listes
   }
   return result.join("")
 }
