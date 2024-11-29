@@ -389,14 +389,14 @@ linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 export function aufgabe24(args) {
   const input = args
   //variable die das erste und letzte zeichen vertauschen
-  return input[input.length - 1] + input.slice(1, input.length - 1) + input[0] // es gibt uns zuerst die letzt zeichen der eingabe, dann gibt es uns züruck ein teil der eingabe, also ie zeichen vom position 1 bis der zeichen vor der letzte-bsp. Hallo, hier wurde es dann all zuruck geben. dann gibt den code der erste zeichen züruck also der vom position 0. Zusammengefasst nimmt den code die letzte zeichen, fügt danach teil der eigabe (ohne erste zeichen) und dann fügt den erste zeochen am ende an
+  return input[input.length - 1] + input.slice(1, input.length - 1) + input[0] // es gibt uns zuerst die letzt zeichen der eingabe, dann gibt es uns züruck ein teil der eingabe, also ie zeichen vom position 1 bis der zeichen vor der letzte-bsp. Hallo, hier wurde es dann all zuruck geben. dann gibt den code der erste zeichen züruck also der vom position 0. Zusammengefasst nimmt den code die letzte zeichen, fügt danach teil der eigabe (ohne erste und letzte zeichen) und dann fügt den erste zeochen am ende an
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function aufgabe25(args) {
   const input = args
   // variable dass den mittlere zeichen gelöscht wird
-  return input.slice(0, input.length / 2) + input.slice(input.length / 2 + 1)
+  return input.slice(0, input.length / 2) + input.slice(input.length / 2 + 1) // den code gibt teil des listes/ eingabe züruck, vom ersten zeichen (position0)bis die mitte der liste mitdem den code die hälfte berechnet. dann gibt den code züruck, teil der liste von der mitte bis der letzte zeichen aber ohne das mittel zeichen der würde übersprungt und mitdem wird er nicht züruck gegeben (gelöscht)
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
