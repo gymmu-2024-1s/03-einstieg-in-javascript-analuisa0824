@@ -375,7 +375,7 @@ linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
 export function aufgabe21(args) {
   //variable dass die eingabe umkehren wird
-  const input = args.split("").reverse().join("")
+  const input = args.split("").reverse().join("") //nimmt die eingabe und trennt die zeichen, kehrt die zeichen um und dann nimmt es zusammen
   return input
 }
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
@@ -383,13 +383,13 @@ linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 export function aufgabe23(args) {
   //variable dass die erste zeichen zusätzlich vorne und hinten gelegt werden
   const input = args
-  return input[0] + input + input[0]
+  return input[0] + input + input[0] //nimmt den zeichen vom position 0 (erste zeichen) und macht der vor und hinten der input(eingabe)
 }
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 export function aufgabe24(args) {
   const input = args
   //variable die das erste und letzte zeichen vertauschen
-  return input[input.length - 1] + input.slice(1, input.length - 1) + input[0]
+  return input[input.length - 1] + input.slice(1, input.length - 1) + input[0] //
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
