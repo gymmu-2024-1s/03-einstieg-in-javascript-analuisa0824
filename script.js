@@ -406,7 +406,7 @@ export function aufgabe27(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
+    const ascii = currentElement.charCodeAt(0) //nimmt der zeichen des listes und gibt den ascii wert von den züruck
     if (48 <= ascii && ascii <= 57) {
       return true
     }
