@@ -113,8 +113,8 @@ export function aufgabe05(args) {
   } else {
     hasUpperCaseLetter = false
   }
+  return hasUpperCaseLetter
 }
-return hasUpperCaseLetter
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
@@ -432,9 +432,9 @@ export function aufgabe30(args) {
     //wenn du a entdeckst, speichere diese position
     if (currentElement === "a") {
       // Zähle countE ums eins hoch
-      countE = countE + 1
+      countA = countA + 1
       // Wenn countE 2 ist, speichere die Position
-      if (countE === 2) {
+      if (countA === 2) {
         position = i
       }
     }
@@ -443,3 +443,18 @@ export function aufgabe30(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function aufgabe31(args) {
+  //variable die der eingabe zu ascii code umwandelt
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    result.push(ascii)
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
