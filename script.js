@@ -420,3 +420,26 @@ export function aufgabe27(args) {
   return false
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe30(args) {
+  const input = args
+  //variable die die die position den dritten e speicher
+  let position = -1
+  let countA = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //wenn du a entdeckst, speichere diese position
+    if (currentElement === "a") {
+      // Zähle countE ums eins hoch
+      countE = countE + 1
+      // Wenn countE 2 ist, speichere die Position
+      if (countE === 2) {
+        position = i
+      }
+    }
+  }
+  return position
+}
+
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
