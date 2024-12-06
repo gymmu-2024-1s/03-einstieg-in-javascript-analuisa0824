@@ -451,10 +451,10 @@ export function aufgabe31(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
-    result.push(ascii)
+    const ascii = currentElement.charCodeAt(0) //holt ascii wert dieses zeichen an
+    result.push(ascii) //hängt ascii code am resultat
   }
 
-  return result.join("")
+  return result.join("") // resultat zusammenbringen sodass es nocht als liste züruckgegeben wird
 }
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
