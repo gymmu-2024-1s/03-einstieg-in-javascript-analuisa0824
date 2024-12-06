@@ -98,22 +98,7 @@ export function aufgabe04(args) {
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
-  const input = args
-  let hasUpperCaseLetter = false
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    const upperCaseVersion = currentElement.toUpperCase() // wert uppercaseversion ist currentelement umgewandelt zu einer uppercase buchstab
-
-    //wenn input i ein . ist oder leerzeichen dann mach nichts
-  }
-  if (currentElement === upperCaseVersion) {
-    //wenn input i gleich wie der uppercase ist dann stimmt es...
-    hasUpperCaseLetter = true //hier wurde true gegben wenn es stimmt
-  } else {
-    hasUpperCaseLetter = false
-  }
-  return hasUpperCaseLetter
+  return /[A-Z]/.test(args) //  [a-z] sucht als  erstes alle zeichen zwischen a und z, und dann diese .test überprüft ob diese buchstaben  gefunden wurde und wenn ja dann gibt es true züruck
 }
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
