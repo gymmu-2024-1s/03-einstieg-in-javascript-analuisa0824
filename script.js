@@ -85,9 +85,37 @@ export function aufgabe04(args) {
   const input = args
   const result = []
 
-  let count = 0
+  //filtern die eingabe sodass nur noch buchstaben und leerzeichen übrig bleiben
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0) //kriegt den ascii code vom current element
+
+    if (65 <= ascii && ascii <= 90) {
+      //Grossbuchstaben
+      result.push(currentElement)
+    } else if (ascii >= 97 && ascii <= 122) {
+      //Kleinbuchstaben
+      result.push(currentElement)
+    } else if (ascii === 32) {
+      //Leerzeichen
+      result.push(currentElement)
+    }
+  }
+  //mehrere leerzeichen am stück rausfiltern
+  const result2 = []
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = input[i]
+    const nextElement = input[i + 1]
+    if (currentElement === " " && nextElement === " ") {
+      //hier sind zwei leerzeichen hinterienander, wir ignorieren das erste
+    } else {
+      result2.push(currentElement)
+    }
+  }
+  //leerzeichen zählen
+  let count = 0
+  for (let i = 0; i < result2.length; i++) {
+    const currentElement = result2[i]
     if (currentElement === " ") {
       count = count + 1
     }
