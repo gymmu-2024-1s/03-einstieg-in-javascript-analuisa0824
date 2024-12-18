@@ -379,6 +379,24 @@ export function aufgabe17(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
+export function aufgabe18(args) {
+  const input = args
+  //wir können aufgabe 17 verwenden um eine liste zu machen
+  const nameAndAge = aufgabe17(input)
+  //wir generieren unsere ausgabliste
+  const result = []
+  //hier schreiben wir ganze worte in die liste
+  result.push("Sie heissen")
+  //wir setzen die liksten zusammen, sodass der name und alter am richtigen ort sind
+  result.push(nameAndAge[0])
+  result.push("und sind")
+  result.push(nameAndAge[1])
+  result.push("Jahre alt")
+  //wir geben den result als text zurück
+  return result.join(" ")
+}
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
 export function aufgabe19(args) {
   const input = args
   //variable die jeden zeichen verdoppelt
