@@ -512,21 +512,23 @@ export function aufgabe31(args) {
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
 
 export function bubbleSort(args) {
-  const input = args
+  const text = args
   const list = text.split("")
 
-  for (let i = 0; i < list.length; i++) {
-    const currentElement = list[i]
-    const nextElement = list[i + 1]
+  for (let i = 0; i < list.length - 1; i++) {
+    //der algorithmus geht durch die liste von erste element zur vor letztes element
+    const currentElement = list[i] //unsere current element ist i
+    const nextElement = list[i + 1] //unsere next elemente ist ein element nach der current element
     if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-      const tmp = list[i + 1]
+      //es gibt uns den ascii coder von der erste element von die listen und prüft ob der current element einen höheren ascii wert hat als der von next element, wenn ja dann sind sie in der falsche rheinfolge
+      const tmp = list[i + 1] // wenn die rheinfolge falsch ist mitdem eine von der elementen gespeichert werden um die rheinfolge der beide elementen zu wechseln
       list[i + 1] = list[i]
       list[i] = tmp
-      i = -1
+      i = -1 //nach der rheinfolge wechsel, der element (i) wird auf -1 gesetzt sodass es die schleife von vorne nochmals anfängt um alles am enden in der rheinfolge zu haben
     }
   }
-  const result = list.join("")
-  return result
+  const result = list.join("") //es nimmt die elementen zusammen in einer einzige liste
+  return result //unsere resultat wird zurückgegeben
 }
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
 
