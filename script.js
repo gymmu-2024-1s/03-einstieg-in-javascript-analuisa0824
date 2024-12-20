@@ -510,3 +510,27 @@ export function aufgabe31(args) {
   return result.join("") // resultat zusammenbringen sodass es nocht als liste züruckgegeben wird
 }
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+
+export function bubbleSort(args) {
+  const input = args
+  const list = text.split("")
+
+  for (let i = 0; i < list.length; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1
+    }
+  }
+  const result = list.join("")
+  return result
+}
+linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
+
+//to do:
+// sortierverfahren codes (bubble, selection, counting)
+//buttons for sortierverfahren
+//if theres times try fixing some passes of questions
