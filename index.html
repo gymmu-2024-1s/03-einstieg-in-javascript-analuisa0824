@@ -9,7 +9,7 @@
     <script type="module" src="script.js"></script>
   </head>
 
-  <body>
+  <bod>
     <div id="input-panel">
       <h1>Aufgaben für Bedingungen und Schleifen</h1>
 
@@ -23,13 +23,118 @@
       <div class="button-container">
         <!-- TODO: Hier neue Buttons erstellen. -->
         <button type="button" data-click="aufgabe01">Aufgabe 1</button>
+        <button type="button" data-click="aufgabe02">Aufgabe 2</button>
+        <button type="button" data-click="aufgabe03">Aufgabe 3</button>
+        <button type="button" data-click="aufgabe04">Aufgabe 4</button>
+        <button type="button" data-click="aufgabe05">Aufgabe 5</button>
+        <button type="button" data-click="aufgabe06">Aufgabe 6</button>
+        <button type="button" data-click="aufgabe07">Aufgabe 7</button>
+        <button type="button" data-click="aufgabe08">Aufgabe 8</button>
+        <button type="button" data-click="aufgabe09">Aufgabe 9</button>
+        <button type="button" data-click="aufgabe10">Aufgabe 10</button>
+        <button type="button" data-click="aufgabe11">Aufgabe 11</button>
+        <button type="button" data-click="aufgabe12">Aufgabe 12</button>
+        <button type="button" data-click="aufgabe13">Aufgabe 13</button>
+        <button type="button" data-click="aufgabe14">Aufgabe 14</button>
+        <button type="button" data-click="aufgabe15">Aufgabe 15</button>
+        <button type="button" data-click="aufgabe16">Aufgabe 16</button>
+        <button type="button" data-click="aufgabe17">Aufgabe 17</button>
+        <button type="button" data-click="aufgabe18">Aufgabe 18</button>
+        <button type="button" data-click="aufgabe19">Aufgabe 19</button>
+        <button type="button" data-click="aufgabe20">Aufgabe 20</button>
+        <button type="button" data-click="aufgabe21">Aufgabe 21</button>
+        <button type="button" data-click="aufgabe23">Aufgabe 23</button>
+        <button type="button" data-click="aufgabe24">Aufgabe 24</button>
+        <button type="button" data-click="aufgabe25">Aufgabe 25</button>
+        <button type="button" data-click="aufgabe27">Aufgabe 27</button>
+        <button type="button" data-click="aufgabe30">Aufgabe 30</button>
+        <button type="button" data-click="aufgabe31">Aufgabe 31</button>
+        <button type="button" data-click="bubbleSort">BubbleSort</button>
+
+
       </div>
 
       <section>
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
-      </section>
+
+    <ol>
+      <li>
+        Bubble Sort:
+        <section>
+          <p>
+            Bubble Sort ist ein Sortierverfahren wo die Elementen einer Liste
+            sortiert werden, mitdem es zwei nebeneinander liegend elemente
+            vergleicht und schaut ob der von der rechte seite kleiner ist als
+            der Element vom linken Seite. Wenn der rechte liegende Element
+            kleiner ist, dann werden diese elementen gewechselt. Den code wird
+            meherer mals durchgeführt bis alle Elementen im richtigen Ort
+            stehen, also dass alle rechte liegende Elementen bei vergleichen
+            irgendwann grösser ist als der die am linken Seite steht.
+          </p>
+          <p>Beispiel:</p>
+          <p>55 07 78 12 42</p>
+          <p>07 55 78 12 42</p>
+          <p>07 55 78 12 42</p>
+          <p>07 55 12 78 42</p>
+          <p>07 12 55 78 42</p>
+          <p>07 12 42 55 78</p>
+          <p>07 12 42 55 78</p>
+        </section>
+      </li>
+
+      <li>
+        Selection Sort:
+        <section>
+          <p>
+            Bei Selection Sort wird der kleinste Element gesucht. Der
+            Algorithmen geht durch der ganze Liste und speichert so zu sagen der
+            kleinste wert und wenn er zum ersten mal fertig mit dem durchgang
+            von der Liste ist, dann nimmt es der kleinste Element und setzt es
+            am Anfang an. Es wird dann meherer mals gemacht ( durch Liste gehen
+            und die nächste kleinste Element speichert und nach vorne nehmen) bis alles Sortiert ist.
+          </p>
+          <p>
+            Beispiel:
+          </p>
+          <p>
+             6 3 1 5 4 - speichert 1 und nach den ersten durchgang mimmt es der 1 nach vorne - 1 6 3 5 4
+
+          </p>
+          <p>
+            1 6 3 5 4 - speichert 3 und nach den nächsten durchgang nimmt es der 3 nach vorne - 1 3 6 5 4
+          </p>
+          <p>
+            1 3 6 5 4 - speichert 4 und nach den nächsten durchgang nimmt es der 4 nach vorne - 1 3 4 6 5
+          </p>
+          <p>
+            1 3 4 6 5 - speichert 5 und nach den nächsten durchgang nimmt es der 5 nach vorne - 1 3 4 5 6
+          </p>
+          <p>
+            1 3 4 5 6 - speichert 6 und nach den letzten durchgang nimmt es der 6 nach vorne - 1 3 4 5 6
+          </p>
+
+        </section>
+      </li>
+      <li>
+        Counting Sort:
+        <section>
+          <p>
+            Bei Counting sort, geht der Algorithmen durch die Listen und zählt
+            wie viele mal diesen wert der Element vorkommt. Also zum Beispiel
+            wir haben eine Liste mit 1 4 6 3 4 1 6, er geht durch die liste und
+            zählt wie viele mal diese wert vorkommt also wert 1 kommt 2 mal vo 4
+            auch und 6 auch. Dann wird in der Rheinfolge also kleinste wert zur
+            grössere wert 'zurück gegeben'. Also es gibt 2 mal dder 1 an und
+            dann 1 mal der 3 an und 2 mal der 4 und 2 mal der 6 züruck. Und so
+            wurde der Liste sortiert.
+          </p>
+        </section>
+      </li>
+    </ol>
+    </section>
     </div>
+
 
     <div id="output">
       <div id="output-header">
