@@ -531,8 +531,3 @@ export function bubbleSort(args) {
   return result //unsere resultat wird zurückgegeben
 }
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
-
-//to do:
-// sortierverfahren codes (bubble, selection, counting)
-//buttons for sortierverfahren
-//if theres times try fixing some passes of questions
